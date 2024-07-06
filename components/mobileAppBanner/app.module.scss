@@ -1,0 +1,107 @@
+.mobileAppBanner {
+  display: flex;
+  gap: 10px;
+  height: 360px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .left {
+    background: var(--primary);
+    width: 33.3%;
+    border-radius: 15px;
+    padding: 50px 40px 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 22px 20px 40px 10px;
+    }
+
+    .linkBtn {
+      width: 67px;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      justify-content: center;
+      background: var(--white);
+    }
+
+    .title {
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110%;
+      color: var(--secondary-black);
+
+      @media (min-width: 768px) and (max-width: 1440px) {
+        font-size: 32px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 38px;
+      }
+    }
+  }
+
+  .right {
+    position: relative;
+    width: 66.7%;
+    border-radius: 15px;
+    background: var(--secondary-black);
+    padding: 60px 50px;
+    background-image: url('/images/app-line.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) and (max-width: 1440px) {
+      padding: 30px 25px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 32px 10px;
+    }
+
+    .title {
+      color: var(--white);
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      margin-bottom: 112px;
+
+      @media (min-width: 768px) and (max-width: 1440px) {
+        font-size: 32px;
+        padding-right: 56px;
+        margin-bottom: 26px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 28px;
+        padding-right: 56px;
+        margin-bottom: 80px;
+      }
+    }
+
+    .storeLinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+
+      img {
+        width: 182px;
+        max-height: 58px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+    }
+  }
+}

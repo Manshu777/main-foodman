@@ -1,0 +1,60 @@
+.header {
+  position: relative;
+  background-color: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 70px;
+  border-radius: 20px;
+
+  .navItem {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    column-gap: 30px;
+    padding: 0 30px;
+
+    .brandLogo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    .itemLink {
+      transition: all 0.2s;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500;
+      color: rgba($color: #171717, $alpha: 0.3);
+
+      &:hover {
+        color: var(--secondary-black);
+      }
+    }
+
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .loginBtn {
+    padding: 14px 24px;
+    border-radius: 50px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--secondary-black);
+    border: 1px solid var(--secondary-black)
+  }
+}

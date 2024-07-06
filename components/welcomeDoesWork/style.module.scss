@@ -1,0 +1,246 @@
+.container {
+  padding: 60px 70px 70px 70px;
+  background-color: var(--secondary-black);
+  border-radius: 20px;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 60px 20px 40px 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 118px 10px 40px 10px;
+  }
+
+  .title {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 50px;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      font-size: 36px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .serviceItems {
+    gap: 33px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      gap: 15px;
+    }
+
+
+    .itemCard {
+      cursor: pointer;
+      background: #292929;
+      border-radius: 30px;
+      width: calc((100% - 66px) / 3);
+      transition: all ease 300ms;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        width: calc((100% - 30px) / 3);
+        border-radius: 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      .itemHeader {
+        padding: 0 30px;
+
+        @media screen and (max-width: 768px) {
+          padding: 0 20px;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          padding: 0 12px;
+        }
+
+        .itemHeaderBody {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 40px 0 24px 0;
+          border-bottom: 1px solid rgba($color: #fff, $alpha: 0.3);
+
+          .itemTitle {
+            color: var(--primary);
+            font-family: Helvetica;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+              font-size: 32px;
+            }
+
+            @media screen and (max-width: 768px) {
+              font-size: 30px;
+            }
+          }
+
+          .itemLink {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 67px;
+            height: 67px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background-color: #3e3e3e;
+            transition: all ease 300ms;
+
+            svg {
+              color: var(--white);
+              transition: all ease 300ms;
+            }
+          }
+        }
+
+
+      }
+
+      .itemDesc {
+        padding: 24px;
+        color: #FFF;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
+      }
+
+      &:hover {
+        background: var(--purple);
+
+        .itemTitle {
+          color: var(--white) !important;
+        }
+
+        .itemLink {
+          background: var(--primary) !important;
+
+          svg {
+            color: var(--black) !important;
+          }
+        }
+
+        .itemBanner {
+          img {
+            filter: grayscale(0);
+          }
+        }
+      }
+
+      .itemBanner {
+        padding: 10px;
+        padding-top: 0;
+        z-index: 6;
+
+        img {
+          width: 100%;
+          overflow: hidden;
+          height: 214px;
+          border-radius: 26px;
+          object-fit: cover;
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+
+  .bottomContent {
+    margin-top: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px;
+      flex-direction: column;
+    }
+
+    .left {
+      width: 60%;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      .text {
+        color: var(--primary);
+        font-family: Helvetica;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        margin-bottom: 40px;
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+          font-size: 42px;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 40px;
+        }
+      }
+
+      .seeAllBtn {
+        border-radius: 50px;
+        border: 1px solid var(--primary);
+        background: var(--primary);
+        padding: 14px 80px;
+        width: max-content;
+        cursor: pointer;
+        color: var(--black);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        &:hover {
+          background: var(--primary-hover);
+        }
+      }
+    }
+
+    .right {
+      width: 40%;
+      color: #FFF;
+      text-align: right;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 26px;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 60px;
+      }
+    }
+  }
+}
